@@ -11,6 +11,8 @@ void (*get_instruction(char *opcode))(stack_t **, unsigned int)
 	instruction_t list[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pop", pop},
+		{"add", add},
 		{NULL, NULL}
 	};
 	unsigned int i;
