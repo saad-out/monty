@@ -51,4 +51,7 @@ void pop(stack_t **, unsigned int);
 void add(stack_t **stack, unsigned int line_number);
 
 void pint(stack_t **stack, __attribute__((unused))unsigned int line_number);
+stack_t *pop2(stack_t **stack, unsigned int line_number);
+void swap(stack_t **stack, unsigned int line_number);
+void nop(stack_t **stack, unsigned int line_number);
 #endif /* H */

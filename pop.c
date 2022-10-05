@@ -9,7 +9,22 @@
  */
 void pop(stack_t **stack, unsigned int line_number)
 {
-	stack_t *new_top;
+	stack_t *popped = pop2(stack, line_number);
+	free(popped);
+}
+/**
+ * pop2 - pop an element from the stack and return it
+ * @stack: pointer to top of the stack
+ * @line_number: the opcode's line number in the bytecode file
+ *
+ * The function will not free the stack item popped. The caller
+ * should free it in on it's own
+ *
+ * Return: the removed
+ */
+stack_t *pop2(stack_t **stack, unsigned int line_number)
+{
+	stack_t *popped, *new_top;
 
 	if (stack && !(*stack))
 	{
@@ -20,6 +35,8 @@ void pop(stack_t **stack, unsigned int line_number)
 	new_top = (*stack)->prev;
 	if (new_top)
 		new_top->next = NULL;
-	free(*stack);
+
+	popped = *stack;
 	*stack = new_top;
+	return (popped);
 }
