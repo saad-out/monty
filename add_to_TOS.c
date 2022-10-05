@@ -13,7 +13,7 @@ stack_t *add_to_TOS(stack_t **stack, int n)
 
 	new_e = malloc(sizeof(*new_e));
 	if (!new_e)
-		dprintf(STDERR_FILENO, "Error: malloc failed"), exit(EXIT_FAILURE);
+		fprintf(stderr, "Error: malloc failed"), exit(EXIT_FAILURE);
 	new_e->n = n, new_e->prev = NULL, new_e->next = NULL;
 
 	if (!stack || !(*stack))

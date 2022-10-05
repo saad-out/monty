@@ -19,7 +19,7 @@ void execute_monty(char *instruction, unsigned int ln, stack_t **top)
 		f = get_instruction(opcode);
 		if (!f)
 		{
-			dprintf(STDERR_FILENO, "L%u: unknown instruction %s\n", ln, opcode);
+			fprintf(stderr, "L%u: unknown instruction %s\n", ln, opcode);
 			exit(EXIT_FAILURE);
 		}
 		/* execute bytecode instruction */

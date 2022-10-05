@@ -16,7 +16,7 @@ void read_monty(int fd)
 
 	fs = fdopen(fd, "r");
 	if (!fs)
-		dprintf(STDERR_FILENO, "fdopen failed\n"), exit(EXIT_FAILURE);
+		fprintf(stderr, "fdopen failed\n"), exit(EXIT_FAILURE);
 
 	top = NULL;
 	buffer = NULL, i = 0;
