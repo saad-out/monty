@@ -49,4 +49,6 @@ void free_stack(stack_t *stack);
 int _atoi(char *nptr, char **endptr, int base);
 void pop(stack_t **, unsigned int);
 void add(stack_t **stack, unsigned int line_number);
+
+void pint(stack_t **stack, __attribute__((unused))unsigned int line_number);
 #endif /* H */
