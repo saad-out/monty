@@ -20,7 +20,6 @@ int main(int ac, char **av)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
-		/* printf("hh\n"); */
 	}
 
 	/* open file if possible */

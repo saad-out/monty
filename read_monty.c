@@ -8,27 +8,22 @@
  */
 void read_monty(int fd)
 {
-	FILE *fs;
 	char *buffer;
 	size_t i;
 	unsigned int line_number;
 	stack_t *top;
-
-	fs = fdopen(fd, "r");
-	if (!fs)
-		fprintf(stderr, "fdopen failed\n"), exit(EXIT_FAILURE);
 
 	top = NULL;
 	buffer = NULL, i = 0;
 
 	/* execute one line\instruction at a time */
 	line_number = 1;
-	while (getline(&buffer, &i, fs) != -1)
+	while (_getline(&buffer, &i, fd) != -1)
 	{
 		execute_monty(buffer, line_number, &top);
 		line_number++;
 	}
 
 	free(buffer);
-	fclose(fs);
+	free_stack(top);
 }
