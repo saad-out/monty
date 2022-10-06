@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern int struct_state;
-
 /**
  * main - simple interpreter for Monty 0.98 scripting language
  * @ac: arguments' count

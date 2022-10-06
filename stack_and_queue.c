@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern int struct_state;
-
 /**
  * stack - change from queue mode to stack mode
  * @stack: the top of the queue/stack

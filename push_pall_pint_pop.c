@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern int struct_state;
-
 /**
  * push - pushes data to the top of the stack
  * @stack: pointer to top of the stack

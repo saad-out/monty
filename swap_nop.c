@@ -1,7 +1,5 @@
 #include "monty.h"
 
-extern int struct_state;
-
 /**
  * swap - swap a TOS item with the one preeding it
  * @stack: pointer to reference to item at TOS
