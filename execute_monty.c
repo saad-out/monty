@@ -14,7 +14,7 @@ void execute_monty(char *instruction, unsigned int ln, stack_t **top)
 	void (*f)(stack_t **, unsigned int);
 
 	opcode = get_opcode(instruction);
-	if (opcode)
+	if (opcode && opcode[0] != '#')
 	{
 		f = get_instruction(opcode);
 		if (!f)

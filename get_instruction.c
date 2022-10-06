@@ -14,7 +14,11 @@ void (*get_instruction(char *opcode))(stack_t **, unsigned int)
 		{"pall", pall},
 		{"pop", pop},
 		{"add", add},
+		{"sub", sub},
+		{"mul", mul},
 		{"pint", pint},
+		{"pstr", pstr},
+		{"rotr", rotr},
 		{"nop", nop},
 		{NULL, NULL}
 	};
