@@ -9,17 +9,14 @@
 void (*get_instruction(char *opcode))(stack_t **, unsigned int)
 {
 	instruction_t list[] = {
-		{"swap", swap},
-		{"push", push},
-		{"pall", pall},
-		{"pop", pop},
-		{"add", add},
-		{"sub", sub},
-		{"mul", mul},
-		{"pint", pint},
-		{"pstr", pstr},
-		{"rotr", rotr},
-		{"nop", nop},
+		{"swap", swap}, {"push", push},
+		{"pall", pall}, {"pop", pop},
+		{"add", add}, {"sub", sub},
+		{"mul", mul}, {"pint", pint},
+		{"pstr", pstr},	{"rotr", rotr},
+		{"nop", nop}, {"div", divide},
+		{"mod", modulus}, {"ptchar", ptchar},
+		{"rotl", rotl},
 		{NULL, NULL}
 	};
 	unsigned int i;
