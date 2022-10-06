@@ -1,5 +1,6 @@
 #ifndef H
 #define H
+
 #define IN_QUEUE 1
 #define IN_STACK 0
 
@@ -53,7 +54,6 @@ void free_stack(stack_t *stack);
 int _atoi(char *nptr, char **endptr, int base);
 void pop(stack_t **, unsigned int);
 void add(stack_t **stack, unsigned int line_number);
-
 void pint(stack_t **stack, __attribute__((unused))unsigned int line_number);
 stack_t *pop2(stack_t **stack, unsigned int line_number);
 void swap(stack_t **stack, unsigned int line_number);
@@ -66,10 +66,11 @@ void rotr(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void divide(stack_t **stack, unsigned int line_number);
 void modulus(stack_t **stack, unsigned int line_number);
-
 void pchar(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void stack(stack_t **stack, __attribute__((unused))unsigned int line_number);
 void queue(stack_t **stack, __attribute__((unused))unsigned int line_number);
 stack_t *add_to_queue(stack_t **stack, int n);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+
 #endif /* H */

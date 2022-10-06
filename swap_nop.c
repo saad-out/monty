@@ -18,7 +18,7 @@ void swap(stack_t **stack, unsigned int line_number)
 		if (struct_state == IN_STACK)
 		{
 			tos_node->prev = next_tos->prev;
-			if(next_tos->prev)
+			if (next_tos->prev)
 				next_tos->prev->next = tos_node;
 			tos_node->next = next_tos;
 			next_tos->prev = tos_node;
@@ -29,4 +29,14 @@ void swap(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
+}
+
+/**
+ * nop - do nothing
+ * @stack: pointer to the top of the stack
+ * @line_number: line number of opcode from bytecode file
+ */
+void nop(stack_t **stack, unsigned int line_number)
+{
+	(void)stack, (void)line_number;
 }
