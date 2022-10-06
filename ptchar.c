@@ -11,7 +11,7 @@ void ptchar(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: can't ptchar, stack empty", line_number);
 		exit(EXIT_FAILURE);
 	}
-	if ((*stack)->n > 127 || (*stack)->n < 0)
+	if ((*stack)->n > 127 || (*stack)->n < 20)
 	{
 		fprintf(stderr, "L%u: can't ptchar, value out of range", line_number);
 		exit(EXIT_FAILURE);
