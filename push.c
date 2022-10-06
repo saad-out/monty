@@ -10,8 +10,9 @@
 void push(stack_t **stack, unsigned int line_number)
 {
 	int n;
-	char *s, *invalid = "";
+	char *s, *invalid;
 
+	invalid = "";
 	/* get value to be pushed to TOS */
 	s = strtok(NULL, "\t\n ");
 	if (s && invalid)

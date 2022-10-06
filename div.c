@@ -15,7 +15,7 @@ void divide(stack_t **stack, unsigned int line_number)
 		top = pop2(stack, line_number);
 		if (top->n == 0)
 		{
-			fprintf(stderr, "L%u: division by 0\n", line_number);
+			fprintf(stderr, "L%u: division by zero\n", line_number);
 			exit(EXIT_FAILURE);
 		}
 		(*stack)->n = (*stack)->n / top->n;
