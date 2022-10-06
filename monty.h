@@ -64,4 +64,5 @@ void divide(stack_t **stack, unsigned int line_number);
 void modulus(stack_t **stack, unsigned int line_number);
 
 void ptchar(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
 #endif /* H */

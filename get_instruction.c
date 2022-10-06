@@ -16,6 +16,7 @@ void (*get_instruction(char *opcode))(stack_t **, unsigned int)
 		{"pstr", pstr},	{"rotr", rotr},
 		{"nop", nop}, {"div", divide},
 		{"mod", modulus}, {"ptchar", ptchar},
+		{"rotl", rotl},
 		{NULL, NULL}
 	};
 	unsigned int i;
