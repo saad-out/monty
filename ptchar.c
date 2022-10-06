@@ -16,5 +16,5 @@ void ptchar(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: can't ptchar, value out of range", line_number);
 		exit(EXIT_FAILURE);
 	}
-	putchar((*stack)->n);
+	printf("%c\n", (*stack)->n);
 }
