@@ -1,11 +1,15 @@
 #ifndef H
 #define H
+#define IN_QUEUE 1
+#define IN_STACK 0
 
 #include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
+extern int struct_state;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -65,4 +69,6 @@ void modulus(stack_t **stack, unsigned int line_number);
 
 void ptchar(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
+void stack(stack_t **stack, __attribute__((unused))unsigned int line_number);
+void queue(stack_t **stack, __attribute__((unused))unsigned int line_number);
 #endif /* H */
