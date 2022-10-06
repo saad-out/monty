@@ -61,4 +61,7 @@ void pstr(stack_t **stack, unsigned int line_number);
 void rotr(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void divide(stack_t **stack, unsigned int line_number);
+void modulus(stack_t **stack, unsigned int line_number);
+
+void ptchar(stack_t **stack, unsigned int line_number);
 #endif /* H */
