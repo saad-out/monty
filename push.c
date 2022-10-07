@@ -1,5 +1,6 @@
 #include "monty.h"
 
+extern int struct_state;
 /**
  * push - pushes data to the top of the stack
  * @stack: pointer to top of the stack
@@ -22,6 +23,8 @@ void push(stack_t **stack, unsigned int line_number)
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-
-	add_to_TOS(stack, n);
+	if (struct_state == IN_STACK)
+		add_to_TOS(stack, n);
+	else
+		add_to_queue(stack, n);
 }

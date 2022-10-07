@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <string.h>
 
-extern int struct_state;
+int struct_state;
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -71,4 +71,5 @@ void pchar(stack_t **stack, unsigned int line_number);
 void rotl(stack_t **stack, unsigned int line_number);
 void stack(stack_t **stack, __attribute__((unused))unsigned int line_number);
 void queue(stack_t **stack, __attribute__((unused))unsigned int line_number);
+stack_t *add_to_queue(stack_t **stack, int n);
 #endif /* H */

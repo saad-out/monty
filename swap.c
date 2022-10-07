@@ -1,4 +1,7 @@
 #include "monty.h"
+
+extern int struct_state;
+
 /**
  * swap - swap a TOS item with the one preeding it
  * @stack: pointer to reference to item at TOS
@@ -11,12 +14,15 @@ void swap(stack_t **stack, unsigned int line_number)
 	if (*stack && (*stack)->prev)
 	{
 		tos_node = pop2(stack, line_number);
-		next_tos = pop2(stack, line_number);
-
-		(*stack)->next = tos_node, tos_node->prev = *stack;
-		(*stack) = tos_node;
-		(*stack)->next = next_tos, next_tos->prev = *stack;
-		*stack = next_tos;
+		next_tos = *stack;
+		if (struct_state == IN_STACK)
+		{
+			tos_node->prev = next_tos->prev;
+			if(next_tos->prev)
+				next_tos->prev->next = tos_node;
+			tos_node->next = next_tos;
+			next_tos->prev = tos_node;
+		}
 	}
 	else
 	{

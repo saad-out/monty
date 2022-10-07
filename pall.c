@@ -1,5 +1,7 @@
 #include "monty.h"
 
+extern int struct_state;
+
 /**
  * pall - prints all elements of a stack
  * @stack: pointer to top of the stack
@@ -17,6 +19,9 @@ void pall(stack_t **stack, __attribute__((unused))unsigned int line_number)
 	while (tmp)
 	{
 		printf("%d\n", tmp->n);
-		tmp = tmp->prev;
+		if (struct_state == IN_STACK)
+			tmp = tmp->prev;
+		else
+			tmp = tmp->next;
 	}
 }

@@ -1,5 +1,6 @@
 #include "monty.h"
 
+extern int struct_state;
 /**
  * pop - removes top element of stack
  * @stack: pointer to top of the stack
@@ -10,6 +11,7 @@
 void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *popped = pop2(stack, line_number);
+
 	free(popped);
 }
 /**
@@ -32,10 +34,18 @@ stack_t *pop2(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 
-	new_top = (*stack)->prev;
-	if (new_top)
-		new_top->next = NULL;
-
+	if (struct_state == IN_STACK)
+	{
+		new_top = (*stack)->prev;
+		if (new_top)
+			new_top->next = NULL;
+	}
+	else
+	{
+		new_top = (*stack)->next;
+		if (new_top)
+			new_top->prev = NULL;
+	}
 	popped = *stack;
 	*stack = new_top;
 	return (popped);

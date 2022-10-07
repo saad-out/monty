@@ -1,5 +1,7 @@
 #include "monty.h"
 
+extern int struct_state;
+
 /**
  * main - simple interpreter for Monty 0.98 scripting language
  * @ac: arguments' count
@@ -15,6 +17,8 @@ int main(int ac, char **av)
 {
 	int fd;
 
+	/* initialize state to stack*/
+	struct_state = IN_STACK;
 	/* check usage */
 	if (ac != 2)
 	{
