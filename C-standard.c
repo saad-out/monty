@@ -65,6 +65,18 @@ void free_stack(stack_t *stack)
 	if (!stack)
 		return;
 
+	if (struct_state == IN_QUEUE)
+	{
+		next_e = stack->next;
+		while (stack)
+		{
+			free(stack), stack = NULL;
+			stack = next_e;
+			if (next_e)
+				next_e = next_e->next;
+		}
+		return ;
+	}
 	next_e = stack->prev;
 	while (stack)
 	{
